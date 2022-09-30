@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\bin\Debug\october_2022.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\bin\Debug\october_2022.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\bin\Debug\october_2022.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\obj\Debug\october_2022.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\obj\Debug\october_2022.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\obj\Debug\october_2022.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\obj\Debug\october_2022.pdb
