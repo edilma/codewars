@@ -39,7 +39,22 @@ namespace october_2022
             Console.ReadLine();
         }
 
+        public static string ReverseWords(string str)
+        {
+            string[] thewords = str.Split(' ');
+            Array.Reverse(thewords);
+            List<string> mywordsList = new List<string>(thewords);
+            List<string> newSentence = new List<string>();
 
+            for (int i = 0; i < mywordsList.Count;  i++)
+            {
+                newSentence.Add(SolutionOptimize(mywordsList[i]));
+            }
+
+            string result = String.Join(" ", newSentence);
+            return result;
+
+        }
 
 
 
@@ -57,7 +72,7 @@ namespace october_2022
             return new string(str.ToArray().Reverse().ToArray());
 
         }
-        public static string ReverseWords(string str)
+        public static string ReverseWords2(string str)
         {
 
             //string[] newArray = str.Split(' ');
