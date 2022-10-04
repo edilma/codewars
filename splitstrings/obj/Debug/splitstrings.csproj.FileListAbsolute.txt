@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\bin\Debug\splitstrings.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\bin\Debug\splitstrings.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\bin\Debug\splitstrings.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\obj\Debug\splitstrings.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\obj\Debug\splitstrings.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\obj\Debug\splitstrings.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\splitstrings\obj\Debug\splitstrings.pdb
