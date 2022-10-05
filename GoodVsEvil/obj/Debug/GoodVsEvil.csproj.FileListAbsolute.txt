@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\obj\Debug\GoodVsEvil.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\obj\Debug\GoodVsEvil.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\bin\Debug\GoodVsEvil.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\bin\Debug\GoodVsEvil.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\bin\Debug\GoodVsEvil.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\obj\Debug\GoodVsEvil.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\GoodVsEvil\obj\Debug\GoodVsEvil.pdb

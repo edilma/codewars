@@ -36,7 +36,6 @@ namespace splitstrings
             else
             {
                 string newString = str+ "_";
-                Console.WriteLine(newString);
                 return StringEven(newString);
             }
 
