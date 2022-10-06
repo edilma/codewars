@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\bin\Debug\UniqueFrequencies.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\bin\Debug\UniqueFrequencies.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\bin\Debug\UniqueFrequencies.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\obj\Debug\UniqueFrequencies.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\obj\Debug\UniqueFrequencies.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\obj\Debug\UniqueFrequencies.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\UniqueFrequencies\obj\Debug\UniqueFrequencies.pdb
