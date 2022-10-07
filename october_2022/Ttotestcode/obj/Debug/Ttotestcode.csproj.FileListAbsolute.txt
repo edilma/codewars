@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\bin\Debug\Ttotestcode.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\bin\Debug\Ttotestcode.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\bin\Debug\Ttotestcode.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\obj\Debug\Ttotestcode.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\obj\Debug\Ttotestcode.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\obj\Debug\Ttotestcode.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Ttotestcode\obj\Debug\Ttotestcode.pdb

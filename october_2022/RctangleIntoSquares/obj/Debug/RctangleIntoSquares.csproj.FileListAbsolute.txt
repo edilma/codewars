@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\bin\Debug\RctangleIntoSquares.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\bin\Debug\RctangleIntoSquares.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\bin\Debug\RctangleIntoSquares.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\obj\Debug\RctangleIntoSquares.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\obj\Debug\RctangleIntoSquares.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\obj\Debug\RctangleIntoSquares.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\RctangleIntoSquares\obj\Debug\RctangleIntoSquares.pdb

@@ -77,6 +77,7 @@ namespace UniqueFrequencies
                     needtoCheck = false;
                     return deletions;
                 }
+
                 foreach (char freq in frequencies)
                 {
 
@@ -103,7 +104,7 @@ namespace UniqueFrequencies
 
                     //Populate the repeatFreq dictionary with the frequencies and how many times
                     //they appear.  All should be 1
-                UniqueFrequencies(repeatFreq);
+                return UniqueFrequencies(repeatFreq);
 
 
 
@@ -111,7 +112,7 @@ namespace UniqueFrequencies
             } while (needtoCheck);
 
 
-            return deletions;
+            
 
 
 
