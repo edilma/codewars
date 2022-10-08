@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\bin\Debug\IP_validation.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\bin\Debug\IP_validation.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\bin\Debug\IP_validation.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\obj\Debug\IP_validation.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\obj\Debug\IP_validation.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\obj\Debug\IP_validation.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\IP_validation\obj\Debug\IP_validation.pdb

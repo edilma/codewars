@@ -67,49 +67,71 @@ namespace UniqueFrequencies
 
             //create a dictionary with the list frequencies.  The key is the freq and value how many times they appear
             // they should appear only once. 
-            Dictionary<char, int> repeatFreq = new Dictionary<char, int>();
-
-            do
+            //Dictionary<char, int> repeatFreq = new Dictionary<char, int>();
+            if (elem == diff)
             {
-                // if all the elements are unique return the deletions
-                if (diff == elem)
+                return deletions;
+            }
+            else
+            {
+                while (elem > diff)
                 {
-                    needtoCheck = false;
-                    return deletions;
-                }
-
-                foreach (char freq in frequencies)
-                {
-
-                    if (!repeatFreq.ContainsKey(freq))
+                    for (int i = 0; i < frequencies.Count; i++)
                     {
-                        repeatFreq.Add(freq, 1);
-                    }
-                    else
-                    {
-                        repeatFreq[freq] += 1;
+                        int item = frequencies[i];
+                       
+                        {
+
+                        }
                     }
                 }
-                foreach (KeyValuePair<char, int> repfreq in repeatFreq)
-                {
-                    int times = repfreq.Value;
-                    if (times != 1)
-                    {
-                        repeatFreq[repfreq.Key] = times - 1;
-                        deletions += 1;
-                    }
+                
+            }
+
+            return 8;
+
+            //do
+            //{
+            //    // if all the elements are unique return the deletions
+            //    if (diff == elem)
+            //    {
+            //        needtoCheck = false;
+            //        return deletions;
+            //    }
+
+            //    foreach (char freq in frequencies)
+            //    {
+
+            //        if (!repeatFreq.ContainsKey(freq))
+            //        {
+            //            repeatFreq.Add(freq, 1);
+            //        }
+            //        else
+            //        {
+            //            repeatFreq[freq] += 1;
+            //        }
+            //    }
+            //    foreach (KeyValuePair<char, int> repfreq in repeatFreq)
+            //    {
+            //        int times = repfreq.Value;
+            //        if (times != 1)
+            //        {
+            //            repeatFreq[repfreq.Key] = times - 1;
+            //            deletions += 1;
+            //        }
 
 
-                }
+            //    }
 
-                    //Populate the repeatFreq dictionary with the frequencies and how many times
-                    //they appear.  All should be 1
-                return UniqueFrequencies(repeatFreq);
+            //        //Populate the repeatFreq dictionary with the frequencies and how many times
+            //        //they appear.  All should be 1
+               //return UniqueFrequencies(repeatFreq);
+            
 
 
 
 
-            } while (needtoCheck);
+           // } while (needtoCheck);
 
 
             
