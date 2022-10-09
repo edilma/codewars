@@ -13,7 +13,7 @@ namespace IP_validation
             //Ojo este item no funciona
             //string test = "12.34.56 .1";
 
-            string test = "pr12.34.56.78";
+            string test = "abc.def.ghi.jkl";
             Console.WriteLine(IsValidIp(test));
             
 
@@ -35,6 +35,11 @@ namespace IP_validation
                 foreach (string num in numbers)
                 {
                     answer = is_number_valid(num);
+                    if (!answer)
+                    {
+                        return false;
+                    }
+                    
                 }
                 return answer;
             }
@@ -42,7 +47,6 @@ namespace IP_validation
         }
         public static bool is_number_valid(string str)
         {
-            Console.WriteLine("my string is {0} characters long {1}", str, str.Length);
             if (str.Length>3)
             {
                 return false;
