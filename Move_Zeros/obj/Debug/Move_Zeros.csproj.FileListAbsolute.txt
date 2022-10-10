@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\bin\Debug\Move_Zeros.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\bin\Debug\Move_Zeros.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\bin\Debug\Move_Zeros.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\obj\Debug\Move_Zeros.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\obj\Debug\Move_Zeros.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\obj\Debug\Move_Zeros.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\Move_Zeros\obj\Debug\Move_Zeros.pdb
