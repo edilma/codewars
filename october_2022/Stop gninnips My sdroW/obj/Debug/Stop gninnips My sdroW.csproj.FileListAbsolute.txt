@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\bin\Debug\Stop gninnips My sdroW.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\bin\Debug\Stop gninnips My sdroW.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\bin\Debug\Stop gninnips My sdroW.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\obj\Debug\Stop gninnips My sdroW.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\obj\Debug\Stop gninnips My sdroW.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\obj\Debug\Stop gninnips My sdroW.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Stop gninnips My sdroW\obj\Debug\Stop gninnips My sdroW.pdb
