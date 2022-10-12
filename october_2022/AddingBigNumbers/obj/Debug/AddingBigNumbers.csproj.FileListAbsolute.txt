@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\bin\Debug\AddingBigNumbers.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\bin\Debug\AddingBigNumbers.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\bin\Debug\AddingBigNumbers.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\obj\Debug\AddingBigNumbers.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\obj\Debug\AddingBigNumbers.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\obj\Debug\AddingBigNumbers.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\AddingBigNumbers\obj\Debug\AddingBigNumbers.pdb
