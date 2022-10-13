@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\bin\Debug\minSwapsPalindrome.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\bin\Debug\minSwapsPalindrome.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\bin\Debug\minSwapsPalindrome.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\obj\Debug\minSwapsPalindrome.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\obj\Debug\minSwapsPalindrome.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\obj\Debug\minSwapsPalindrome.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\minSwapsPalindrome\obj\Debug\minSwapsPalindrome.pdb
