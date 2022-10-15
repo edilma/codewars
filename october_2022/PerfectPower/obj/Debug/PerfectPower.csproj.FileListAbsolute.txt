@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\bin\Debug\PerfectPower.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\bin\Debug\PerfectPower.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\bin\Debug\PerfectPower.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\obj\Debug\PerfectPower.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\obj\Debug\PerfectPower.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\obj\Debug\PerfectPower.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\PerfectPower\obj\Debug\PerfectPower.pdb
