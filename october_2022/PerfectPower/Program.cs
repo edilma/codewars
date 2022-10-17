@@ -10,36 +10,63 @@ namespace PerfectPower
     {
         static void Main(string[] args)
         {
-            int num = 8;
-            Console.WriteLine(IsPerfectPower(num));
+            int num = 500;
+            //double root = Math.Pow(4, 2);
+            //Console.WriteLine(root);
+
+          Console.WriteLine(IsPerfectPower3(num));
             Console.ReadLine();
 
         }
-        public static (int, int)? IsPerfectPower(int n)
+
+        public static (int, int)? IsPerfectPower3(int n)
         {
-            // math.power(base, power)
-            int kPower=2;
-            int mBase=2;
-            while (mBase<n)
+            int a = 2;
+            int factor = 1;
+            if (n%10==0)
             {
-                do
-                {
-                    if (Math.Pow(mBase, kPower) == n)
-                    {
-                        return (mBase, kPower);
-                    }
-                   mBase++;
-                } while (kPower<n);
-
-
-                kPower++;
+                a = 5;
+                factor = 5;
 
             }
-           
+            else
+            {
+                if (n%3==0)
+                {
+                    a = 3;
+                    factor = 3;
+                }
+            }
+
+                        
+            while (a < n)
+            {
+                if (n % a == 0)
+                {
+                    int b = 2;
+                    do
+                    {
+                        if (Math.Pow(a, b) == n)
+                        {
+                            return (a, b);
+                        }
+                        else {b++; }
+                       
+
+                    } while (Math.Pow(a, b) <= n);
+                    
+
+                }
+                a=a + factor;
+
+            }
             return null;
         }
 
-        
-        
-    }
+
+
+
+
+
+        }
 }
