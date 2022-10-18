@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListFiltering", "ListFiltering.csproj", "{629C5EA2-E8F1-4782-902E-DC30CB9D61CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{629C5EA2-E8F1-4782-902E-DC30CB9D61CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629C5EA2-E8F1-4782-902E-DC30CB9D61CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629C5EA2-E8F1-4782-902E-DC30CB9D61CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629C5EA2-E8F1-4782-902E-DC30CB9D61CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7C04F44-0D7E-496A-87BC-12AEF6D40BA6}
+	EndGlobalSection
+EndGlobal

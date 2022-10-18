@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\obj\Debug\ListFiltering.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\obj\Debug\ListFiltering.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\bin\Debug\ListFiltering.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\bin\Debug\ListFiltering.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\bin\Debug\ListFiltering.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\obj\Debug\ListFiltering.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\ListFiltering\obj\Debug\ListFiltering.pdb
