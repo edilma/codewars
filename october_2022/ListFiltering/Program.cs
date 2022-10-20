@@ -23,9 +23,13 @@ namespace ListFiltering
             //Console.WriteLine(IsIsogram(str));
 
             int a = 1;
-            int b = 2;
-            int result = GetSum(a, b);
-            Console.WriteLine(result);
+            int b = 10;
+            int c = 1;
+            //int result = GetSum(a, b);
+            //Console.WriteLine(result);
+
+            int max = ExpressionsMatter(a, b, c);
+            Console.WriteLine(max);
 
 
             Console.ReadLine();
@@ -72,6 +76,23 @@ namespace ListFiltering
             }
             return sum;
         }
+        public static int ExpressionsMatter(int a, int b, int c)
+        {
+            int firsPar = (a + b) * c;
+            int SecPar = a + (b * c);
+            int ThirPar = (a * b) + c;
+            int FourPar = a * b * c;
+            int fifthPar = a * (b + c);
+            int sixPar = a + b + c;
+
+            int[] results = { firsPar, SecPar, ThirPar, FourPar, fifthPar, sixPar };
+            return results.Max();
+
+
+
+        }
+
+
 
 
     }
