@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\obj\Debug\YoureSquare.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\obj\Debug\YoureSquare.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\bin\Debug\YoureSquare.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\bin\Debug\YoureSquare.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\bin\Debug\YoureSquare.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\obj\Debug\YoureSquare.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\YoureSquare\obj\Debug\YoureSquare.pdb
