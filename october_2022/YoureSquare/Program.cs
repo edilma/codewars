@@ -11,7 +11,7 @@ namespace YoureSquare
         static void Main(string[] args)
         {
             //int n = 282172; has to be false
-            int b = 63001;
+            int b = 10000;
             //186986 has to be false
             Console.WriteLine(IsSquare(b));
             Console.WriteLine(Math.Sqrt(b));
@@ -37,56 +37,254 @@ namespace YoureSquare
                     return false;
                 }
                 else
-                {                  
-                    int poss1 = 1;
-                    int poss2 = 9;
-
-                    for (int i = poss1; i < n / 2; i=i+10)
+                {
+                    if (lastDigit ==1)
                     {
-                        if (i * i == n)
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            if (i * i > n)
-                            {
-                                i = n + 1;
-                            }
-                        }
-
+                        return IsSquareOfOne(n);
                     }
-                    for (int i = poss2; i < n / 2; i = i + 10)
+                    if (lastDigit == 4)
                     {
-                        if (i * i == n)
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            if (i * i > n)
-                            {
-                                i = n + 1;
-                            }
-                        }
-
+                        return IsSquareOfFour(n);
                     }
-
+                    if (lastDigit==9)
+                    {
+                        return IsSquareOfNine(n);
+                    }
+                    if (lastDigit == 6)
+                    {
+                        return IsSquareOfSix(n);
+                    }
+                    if (lastDigit == 0)
+                    {
+                        return IsSquareOfZero(n);
+                    }
+                    if (lastDigit == 5)
+                    {
+                        return IsSquareOfFive(n);
+                    }
                     return false;
 
                 }
             }
-            //numbers bigger than 10 that are square
+            
+        }
+        public static bool IsSquareOfOne (int n)
+        {
+            int poss1 = 1;
+            int poss2 = 9;
+
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+            for (int i = poss2; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+
+            return false;
+
+        }
+        public static bool IsSquareOfFour(int n)
+        {
+            int poss1 = 2;
+            int poss2 = 8;
+
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+            for (int i = poss2; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+
+            return false;
+
+        }
+        public static bool IsSquareOfNine(int n)
+        {
+            int poss1 = 3;
+            int poss2 = 7;
+
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+            for (int i = poss2; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+
+            return false;
+
+        }
+        public static bool IsSquareOfSix(int n)
+        {
+            int poss1 = 4;
+            int poss2 = 6;
+
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+            for (int i = poss2; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+
+            return false;
+
+        }
+        public static bool IsSquareOfZero(int n)
+        {
+            int poss1 = 10;
+            int poss2 = 5;
+
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+            for (int i = poss2; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
+
+            return false;
+
+        }
+        public static bool IsSquareOfFive(int n)
+        {
+            int poss1 = 5;
            
+            for (int i = poss1; i < n / 2; i = i + 10)
+            {
+                if (i * i == n)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (i * i > n)
+                    {
+                        i = n + 1;
+                    }
+                }
+
+            }
             
-            //double rootN = Math.Sqrt(n);
-            //int number;
-            //bool isInteger = Int32.TryParse(rootN.ToString(), out number);
-            
-            //    return rootN * rootN == n ? true : false;
-                       
-           
-            
+            return false;
+
         }
 
     }
