@@ -23,7 +23,7 @@ namespace YoureSquare
         public static bool IsSquare(int n)
         {
             int[] noEndSq = { 2, 3, 7, 8 };
-            int[] squares = { 0,4,9 };
+            int[] squares = { 0,1,4,9 };
             int lastDigit = n % 10;
             //numbers smaller than 10 that are square
             if (squares.Contains(n))
@@ -66,7 +66,9 @@ namespace YoureSquare
 
                 }
             }
-            
+
+            // other version usando square formula
+            //return Math.Sqrt(n) % 1 == 0;
         }
         public static bool IsSquareOfOne (int n)
         {
