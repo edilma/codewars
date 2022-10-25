@@ -8,9 +8,12 @@ namespace PaginationHelper
 {
     public class PagnationHelper<T>
     {
+        IList<T> _collection;
+        int _itemsPerPage;
         public PagnationHelper(IList<T> collection, int itemsPerPage)
         {
             _collection = collection;
+            _itemsPerPage = itemsPerPage;
 
 
         }
@@ -22,7 +25,7 @@ namespace PaginationHelper
         {
             get
             {
-                
+                return  _collection.Count();
             }
         }
 
@@ -33,7 +36,9 @@ namespace PaginationHelper
         {
             get
             {
-
+                double pages =ItemCount/ ItemCount;
+                return (int)pages;  
+               
             }
         }
 
@@ -45,6 +50,22 @@ namespace PaginationHelper
         public int PageItemCount(int pageIndex)
         {
 
+            if (pageIndex> PageCount || pageIndex<0)
+            {
+                return -1;
+            }
+            else
+            {
+                if (pageIndex != PageCount-1)
+                {
+                    return PageCount;
+                }
+                else
+                {
+                    return ItemCount % PageCount ;
+                }
+            }
+
         }
 
         /// <summary>
@@ -54,6 +75,9 @@ namespace PaginationHelper
         /// <returns>The zero-based page index of the page containing the item at the given item index or -1 if the item index is out of range</returns>
         public int PageIndex(int itemIndex)
         {
+
+
+            return itemIndex / _itemsPerPage;
 
         }
     }
