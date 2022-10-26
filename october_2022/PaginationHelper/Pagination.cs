@@ -25,7 +25,7 @@ namespace PaginationHelper
         {
             get
             {
-                return  _collection.Count();
+                return  _collection.Count;
             }
         }
 
@@ -36,8 +36,8 @@ namespace PaginationHelper
         {
             get
             {
-                double pages =ItemCount/ ItemCount;
-                return (int)pages;  
+                int pages = ItemCount/ _itemsPerPage;
+                return (int)Math.Ceiling(pages);  
                
             }
         }
