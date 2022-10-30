@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\bin\Debug\Multiply.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\bin\Debug\Multiply.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\bin\Debug\Multiply.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\obj\Debug\Multiply.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\obj\Debug\Multiply.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\obj\Debug\Multiply.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\october_2022\Multiply\obj\Debug\Multiply.pdb

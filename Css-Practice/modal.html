@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal CSS Practice</title>
+    <style>
+        .modal-box{
+            background-color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 5px;
+            padding-left: 25px;
+            padding-bottom: 15px;
+            flex: content;
+            flex-direction: row;
+           width: 50px;
+            border: 10px;
+            border-radius: 9px;
+           display: flexbox;
+            width: 600px;
+        }
+        .paragraph-modal{
+          font-size: 20px;  
+        }
+        .close-button{
+            font-size: large;
+            font-weight: bold;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-style: solid;
+            border-color: rgb(209, 198, 198);
+            width:86px;
+        }
+
+        .body-background{
+            background-color: rgba(0,0,0,0.8);
+            padding-top: 0;
+            padding-bottom: 60px;
+            display: flexbox;
+            flex-direction: row;
+            justify-content: space-between;
+        
+        }
+    </style>
+    
+</head>
+<body class="body-background">
+    <div class="modal-box" >
+    <h1 >
+        Modal Title
+    </h1>
+    <p class="paragraph-modal">This is a modal</p>
+    <button class="close-button">
+        Close
+    </button>
+    </div>
+    
+</body>
+</html>
