@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\bin\Debug\numbersToreversedArray.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\bin\Debug\numbersToreversedArray.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\bin\Debug\numbersToreversedArray.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\obj\Debug\numbersToreversedArray.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\obj\Debug\numbersToreversedArray.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\obj\Debug\numbersToreversedArray.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\numbersToreversedArray\obj\Debug\numbersToreversedArray.pdb
