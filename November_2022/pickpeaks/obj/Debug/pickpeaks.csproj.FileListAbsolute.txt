@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\bin\Debug\pickpeaks.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\bin\Debug\pickpeaks.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\bin\Debug\pickpeaks.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\obj\Debug\pickpeaks.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\obj\Debug\pickpeaks.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\obj\Debug\pickpeaks.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\pickpeaks\obj\Debug\pickpeaks.pdb

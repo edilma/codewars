@@ -39,7 +39,12 @@ namespace numbersToreversedArray
                 }
                 return result.ToArray();
             };
-          
+            //Their solution
+            //return n.ToString()
+            //    .Reverse()
+            //    .Select(t => Convert.ToInt64(t.ToString()))
+            //    .ToArray();
+
         }
             
         }
