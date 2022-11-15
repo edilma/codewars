@@ -12,18 +12,19 @@ namespace pickpeaks
         {
             int[] test = { 3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3 };
             int[] test2 = { 1, 2, 2, 2, 1 };
-            // Dictionary<string, List<int>> result = GetPeaks(test2);
+            int[] test3 = { 1, 2, 1 };
+            Dictionary<string, List<int>> result = GetPeaks(test);
 
-            Console.WriteLine(test2[0]);
+            //Console.WriteLine(test2[0]);
 
-            //foreach (var item in result)
-            //{
-            //    Console.WriteLine(item.Key);
-            //    foreach (var value in item.Value)
-            //    {
-            //        Console.WriteLine(value);
-            //    }
-            //}
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Key);
+                foreach (var value in item.Value)
+                {
+                    Console.WriteLine(value);
+                }
+            }
 
 
             Console.ReadLine();
@@ -40,29 +41,42 @@ namespace pickpeaks
            // List<int> ogArray = new List<int>(arr);
             Dictionary<string, List<int>> solution = new Dictionary<string, List<int>>();
             List<int> peaks = new List<int>();
-            List<int> posInt = new List<int>();
-            solution.Add("pos:", posInt);
-            solution.Add("peaks:", peaks);
-            int prevPos = 0;
-            int currentPos = 0;
-            for (int nextPos = 1; nextPos < arr.Length-1; nextPos++)
+            List<int> posPeaks = new List<int>();
+            int currentPeak= 0 ;
+            int currentPos=-1 ;
+
+            for (int i = 1; i < arr.Length-1; i++)
             {
-                if (arr[nextPos] >arr[prevPos])
+                if (arr[i-1]<arr[i])
                 {
-                    currentPos = nextPos;
-                    
+                    currentPeak = arr[i];
+                    currentPos = i;
                 }
+                else
+                {
+                    if (arr[i+1]>arr[i])
+                    {
+                        peaks.Add(currentPeak);
+                        posPeaks.Add(currentPos);
+                    }
+                    else
+                    {
+                        if (arr[i]==arr[i+1])
+                        {
+                            peaks.Add(currentPeak);
+                            posPeaks.Add(currentPos);
+                        }
+                    }
+
+                }
+
             }
+            solution.Add("pos:", posPeaks);
+            solution.Add("peaks:", peaks);
 
+            return solution;
 
-
-
-
-
-
-
-
-            return null;
+            
 
 
         }
@@ -95,15 +109,15 @@ namespace pickpeaks
                     {
                         posInt.Add(current);
                         peaks.Add(ogArray[current]);
-                        before = current;
-                        current = after;
-                        after = i++;
+                        before = current+1;
+                        current +=2;
+                        
                     }
                     else
                     {
                         if (ogArray[current] == ogArray[after])
                         {
-                            after = after++;
+                            after = current+1;
                         }
                     }
 
