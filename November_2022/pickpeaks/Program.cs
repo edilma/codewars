@@ -13,7 +13,8 @@ namespace pickpeaks
             int[] test = { 3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3 };
             int[] test2 = { 1, 2, 2, 2, 1 };
             int[] test3 = { 1, 2, 1 };
-            Dictionary<string, List<int>> result = GetPeaks(test);
+            int[] test4 = { 2, 1, 3, 1, 2, 2, 2, 2 };
+            Dictionary<string, List<int>> result = GetPeaks(test4);
 
             //Console.WriteLine(test2[0]);
 
@@ -42,33 +43,33 @@ namespace pickpeaks
             Dictionary<string, List<int>> solution = new Dictionary<string, List<int>>();
             List<int> peaks = new List<int>();
             List<int> posPeaks = new List<int>();
-            int currentPeak= 0 ;
-            int currentPos=-1 ;
+           
 
             for (int i = 1; i < arr.Length-1; i++)
             {
+                int currentPeak;
+                int currentPos=-1 ;
+
                 if (arr[i-1]<arr[i])
                 {
                     currentPeak = arr[i];
                     currentPos = i;
                 }
-                else
-                {
-                    if (arr[i+1]>arr[i])
+
+
+
+
+                if ((arr[i + 1] < arr[i]) &(currentPos == -1))
                     {
+                        currentPeak = arr[i];
+                        currentPos = i;
                         peaks.Add(currentPeak);
                         posPeaks.Add(currentPos);
                     }
-                    else
-                    {
-                        if (arr[i]==arr[i+1])
-                        {
-                            peaks.Add(currentPeak);
-                            posPeaks.Add(currentPos);
-                        }
-                    }
+                    
 
-                }
+               
+
 
             }
             solution.Add("pos:", posPeaks);
