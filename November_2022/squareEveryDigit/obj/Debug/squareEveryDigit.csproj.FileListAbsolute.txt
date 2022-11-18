@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\bin\Debug\squareEveryDigit.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\bin\Debug\squareEveryDigit.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\bin\Debug\squareEveryDigit.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\obj\Debug\squareEveryDigit.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\obj\Debug\squareEveryDigit.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\obj\Debug\squareEveryDigit.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\November_2022\squareEveryDigit\obj\Debug\squareEveryDigit.pdb
