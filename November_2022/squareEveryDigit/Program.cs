@@ -13,15 +13,15 @@ namespace squareEveryDigit
             //int num = 811181;
             //Console.WriteLine(num * num);
             //Console.WriteLine(SquareDigits(num));
-            string word = "The sunset sets at twelve o' clock.";
-            string word2 = "h";
-            Console.WriteLine(AlphabetPosition(word));
+            //string word = "The sunset sets at twelve o' clock.";
+            //string word2 = "h";
+           // Console.WriteLine(AlphabetPosition2(word));
 
             //int ind = word.IndexOf('s');
             //Console.WriteLine(ind);
 
             //string str = "GeeksForGeeks";
-            
+
             //foreach (char item in str)
             //{
             //    int index1 = str.IndexOf(item);
@@ -30,32 +30,52 @@ namespace squareEveryDigit
             //        Console.WriteLine("The Index Value of character 'k' is " + index1);
             //    }
             //}
+
+            int number = -34;
+            Console.WriteLine(Opposite(number));
             
 
             Console.ReadLine();
 
+        }
+
+        public static int Opposite(int number)
+        {
+            return -number;
+            // Happy Coding
         }
         public static string AlphabetPosition(string text)
         {
             string letters = text.ToUpper();
 
             char[] alph = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-        
-            string ans=string.Empty;
+            List<int> nums = new List<int>();
+            
             foreach (char letter in letters)
             {
                
                 if (alph.Contains(letter))
                 {
+
                     int index = Array.IndexOf(alph,letter)+1;
-                    ans = ans+" " +  index.ToString();
+                    nums.Add(index);
+                    //ans += index.ToString()+" " ;
                 }
 
             }
+            string ans = String.Join(" ", nums);
 
 
             return ans;
         }
+        //FActoring my version
+        public static string AlphabetPosition2(string text)
+        {
+            return String.Join(" ", text.ToLower().Where(char.IsLetter).Select(x => x - 'a' + 1));
+        }
+
+
+
 
         public static int SquareDigits(int n)
         {

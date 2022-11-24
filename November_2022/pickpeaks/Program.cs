@@ -10,22 +10,28 @@ namespace pickpeaks
     {
         static void Main(string[] args)
         {
-            int[] test = { 3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3 };
-            int[] test2 = { 1, 2, 2, 2, 1 };
-            int[] test3 = { 1, 2, 1 };
-            int[] test4 = { 2, 1, 3, 1, 2, 2, 2, 2 };
-            Dictionary<string, List<int>> result = GetPeaks(test4);
+            //int[] test = { 3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3 };
+            //int[] test2 = { 1, 2, 2, 2, 1 };
+            //int[] test3 = { 1, 2, 1 };
+            //int[] test4 = { 2, 1, 3, 1, 2, 2, 2, 2 };
+            //Dictionary<string, List<int>> result = GetPeaks(test4);
 
-            //Console.WriteLine(test2[0]);
+            ////Console.WriteLine(test2[0]);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Key);
-                foreach (var value in item.Value)
-                {
-                    Console.WriteLine(value);
-                }
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Key);
+            //    foreach (var value in item.Value)
+            //    {
+            //        Console.WriteLine(value);
+            //    }
+            //}
+
+            int numa = 5;
+            int numb = 9;
+            string result = AddBinary(numa, numb);
+
+            Console.WriteLine(result);
 
 
             Console.ReadLine();
@@ -35,9 +41,13 @@ namespace pickpeaks
 
 
 
+        
+            public static string AddBinary(int a, int b)
+            {
+            return Convert.ToString((a + b),2);
+            }
 
-
-        public static Dictionary<string, List<int>> GetPeaks(int[] arr)
+            public static Dictionary<string, List<int>> GetPeaks(int[] arr)
         {
            // List<int> ogArray = new List<int>(arr);
             Dictionary<string, List<int>> solution = new Dictionary<string, List<int>>();
