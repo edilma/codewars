@@ -26,10 +26,16 @@ namespace pickpeaks
             //        Console.WriteLine(value);
             //    }
             //}
+            //string result = AddBinary(numa, numb);
 
-            int numa = 5;
-            int numb = 9;
-            string result = AddBinary(numa, numb);
+            double a = 291.5;
+            double b = 291.5;
+            double c = 263.01;
+            double s = 263;
+
+            bool result = TriangleFitsInSquare(a, b, c, s);
+
+
 
             Console.WriteLine(result);
 
@@ -38,11 +44,20 @@ namespace pickpeaks
 
         }
 
+        public static bool TriangleFitsInSquare(double a, double b, double c, double s)
+        {
+            double semiPerimeterTria = (a+b+c)/ 2;
+            double areaTria = Math.Sqrt(semiPerimeterTria * (semiPerimeterTria - a) * (semiPerimeterTria - b) * (semiPerimeterTria - c));
+            double areaSq = (s * s);
+
+            return (areaTria<= areaSq?true:false );
+            
+          
+        }
 
 
 
-        
-            public static string AddBinary(int a, int b)
+        public static string AddBinary(int a, int b)
             {
             return Convert.ToString((a + b),2);
             }
