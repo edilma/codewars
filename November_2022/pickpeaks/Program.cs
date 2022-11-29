@@ -46,11 +46,28 @@ namespace pickpeaks
 
         public static bool TriangleFitsInSquare(double a, double b, double c, double s)
         {
-            double semiPerimeterTria = (a+b+c)/ 2;
-            double areaTria = Math.Sqrt(semiPerimeterTria * (semiPerimeterTria - a) * (semiPerimeterTria - b) * (semiPerimeterTria - c));
-            double areaSq = (s * s);
+            double diagSq = Math.Sqrt(2 * s * s);
+            if (a>diagSq || b>diagSq)
+            {
+                return false;
+            }
+            else
+            {
+                if (c>diagSq)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
 
-            return (areaTria<= areaSq?true:false );
+            //double semiPerimeterTria = (a+b+c)/ 2;
+            //double areaTria = Math.Sqrt(semiPerimeterTria * (semiPerimeterTria - a) * (semiPerimeterTria - b) * (semiPerimeterTria - c));
+            //double areaSq = (s * s);
+
+           // return (areaTria<= areaSq?true:false );
             
           
         }
