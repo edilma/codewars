@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pagesNames=[
+            "Home",
+            "About Us",
+            "Contact Us",
+            "JavaScript Playground",
+            "News",
+            "Blog"
+        ];
+        for (let i = 0; i < pagesNames.length; i++) {
+            if (document.title===pagesNames[i]) {
+                console.log("We are here: " + pagesNames[i]);
+            }
+            else{
+                console.log(" We are not here:" + pagesNames[i]);
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
