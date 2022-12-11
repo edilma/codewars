@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\bin\Debug\BreakCamelCase.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\bin\Debug\BreakCamelCase.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\bin\Debug\BreakCamelCase.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\obj\Debug\BreakCamelCase.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\obj\Debug\BreakCamelCase.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\obj\Debug\BreakCamelCase.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\BreakCamelCase\obj\Debug\BreakCamelCase.pdb
