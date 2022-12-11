@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script> 
+    /*
         var pagesNames=[
             "Home",
             "About Us",
@@ -22,9 +23,29 @@
             }
             else{
                 console.log(" We are not here:" + pagesNames[i]);
-            }
-            
+            }           
         }
+*/
+        function solution(str, ending){
+            size = ending.length;
+            locBeg = str.length - ending.length 
+            compare = str.slice(locBeg);
+            console.log ( "the location to start is  " + locBeg);
+            console.log ( "the string to compare is  " + str.slice(locBeg));
+            if (ending ===compare ) {
+               return true; 
+            }
+            else{
+                return false;
+            }
+        }
+
+        function otherSol (str, ending){
+            return (str.slice(str.length - ending.length )=== ending)
+        }
+// an even better solution is  return str.endsWith(ending);
+
+
     </script>
     
 </body>
