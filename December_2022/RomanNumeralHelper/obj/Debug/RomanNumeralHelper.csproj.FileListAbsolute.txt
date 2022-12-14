@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\bin\Debug\RomanNumeralHelper.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\bin\Debug\RomanNumeralHelper.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\bin\Debug\RomanNumeralHelper.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\obj\Debug\RomanNumeralHelper.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\obj\Debug\RomanNumeralHelper.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\obj\Debug\RomanNumeralHelper.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\RomanNumeralHelper\obj\Debug\RomanNumeralHelper.pdb
