@@ -45,47 +45,53 @@ namespace RomanNumeralHelper
             };
             int sum = 0;
             int lengthRoman = romanNumeral.Length;
-            ;
+  
 
-            if (lengthRoman>1)
+            if (lengthRoman >= 3)
             {
-          
-                for (int i = 1; i <= lengthRoman-1; i++)
+                for (int i = 0; i < lengthRoman-1; i++)
                 {
-                    int thisLetterValue = myValues[romanNumeral[i - 1]];
-                    int nextLetterValue = myValues[romanNumeral[i]];
-                    if (nextLetterValue <= thisLetterValue)
+                    int current = myValues[romanNumeral[i]];
+                    int after = myValues[romanNumeral[i + 1]];
+                    if (current < after)
                     {
-                        sum = sum + thisLetterValue;
-                        i++;
+                        sum = sum - current;
                     }
                     else
                     {
-                        sum = sum - thisLetterValue;
-                        i++;
-                    };
-                   
+                        sum = sum + current;
+                    }
 
                 }
-                sum = sum + myValues[romanNumeral[lengthRoman-1]];
             }
             else
             {
-                sum = sum + myValues[romanNumeral[0]];
+                ///<less2letter>
+                //When a roman number has 2 letters or less
+                if (lengthRoman == 1)
+                {
+                    sum = myValues[romanNumeral[0]];
+                }
+                else
+                {
+                    if ((lengthRoman == 2) & (myValues[romanNumeral[0]] < myValues[romanNumeral[1]]))
+                    {
+                        sum = myValues[romanNumeral[1]] - myValues[romanNumeral[0]];
+                    }
+                    else
+                    {
+                        sum = myValues[romanNumeral[1]] + myValues[romanNumeral[0]];
+                    };
+
+                }
+                /// < /less2letter >
+                /// 
             }
 
-            
 
             return sum;
         }
 
-   
-
-            
-
-
-          
-        
         public static string TheLetter(int n)
         {
             
