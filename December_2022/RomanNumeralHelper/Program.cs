@@ -14,14 +14,16 @@ namespace RomanNumeralHelper
            // Console.WriteLine(ToRoman(n));
             //Console.WriteLine(900 % 1000);
             //Console.WriteLine(TheLetter(956));
-            Console.WriteLine(FromRoman("IV"));
+            Console.WriteLine(FromRoman("II"));
 
 
             Console.ReadLine();
 
 
         }
-
+        //<convert2Roman>
+        // This function transform a digit to roman numerals
+        //it uses a function to give the values of roman
         public static string ToRoman(int n)
         {
             string roman = "";
@@ -34,12 +36,14 @@ namespace RomanNumeralHelper
             } while (n != 0);
             return roman;
         }
+        //</convert2Roman>
 
-
-
+        //<convert2Digit>
+        //This function convert a digit number to roman numerals
         public static int FromRoman(string romanNumeral)
         {
             //<letters/Value>
+            // Dictionay where I put the value of the roman letters
             Dictionary<char, int> myValues = new Dictionary<char, int>
             {
                 {'I',1 } , {'V',5}, {'X',10}, { 'L',50}, {'C',100}, {'D',500}, {'M',1000}
@@ -59,27 +63,30 @@ namespace RomanNumeralHelper
                     sum = (current < after ? sum - current : sum + current);
 
                 }
+                //add the last number that it is not evaluated in the for loop
                 sum = sum + myValues[romanNumeral[lengthRoman - 1]];
             }
             else
             {
                 ///<less2letter>
-                //When a roman number has 2 letters or less
+                //Case when a roman number has 2 letters or less
                 if (lengthRoman == 1)
                 {
                     sum = myValues[romanNumeral[0]];
                 }
                 else
                 {
-                    if ((lengthRoman == 2) & (isBigger( romanNumeral[0], romanNumeral[1])))
+                    // check the value of the 2 letters and decide what to do
+                    // depending on their location
+                    if ((lengthRoman == 2) & (isSmaller( romanNumeral[0], romanNumeral[1])))
                     {
+                       
                         sum = myValues[romanNumeral[1]] - myValues[romanNumeral[0]];
                     }
                     else
                     {
                         sum = myValues[romanNumeral[1]] + myValues[romanNumeral[0]];
                     };
-
                 }
                 /// < /less2letter >
                 /// 
@@ -88,8 +95,14 @@ namespace RomanNumeralHelper
 
             return sum;
         }
+        //<convert2Digit>
 
-        public static bool isBigger(char a, char b)
+
+
+        //<compare-letters>
+        // This function takes two letters and check their value in a dictionary
+        // then compare the two values.  If the value is smaller returns true
+        public static bool isSmaller(char a, char b)
         {
             Dictionary<char, int> myValues = new Dictionary<char, int>
             {
@@ -98,11 +111,12 @@ namespace RomanNumeralHelper
                         
             int valueA = myValues[a];
             int valueB = myValues[b];
-          //  Console.WriteLine($"En isBigger el pimero es {myValues[a]} y el segundo es {myValues[b]} ");
+          //Console.WriteLine($"En isSmaller el pimero es {myValues[a]} y el segundo es {myValues[b]} ");
 
-            return valueB < valueA ? true : false;
+            return valueA < valueB ? true : false;
 
         }
+        //</compare-letters>
 
         public static string TheLetter(int n)
         {
