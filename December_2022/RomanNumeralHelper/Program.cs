@@ -14,7 +14,7 @@ namespace RomanNumeralHelper
            // Console.WriteLine(ToRoman(n));
             //Console.WriteLine(900 % 1000);
             //Console.WriteLine(TheLetter(956));
-            Console.WriteLine(FromRoman("MCDXCIX"));
+            Console.WriteLine(FromRoman("IV"));
 
 
             Console.ReadLine();
@@ -39,10 +39,12 @@ namespace RomanNumeralHelper
 
         public static int FromRoman(string romanNumeral)
         {
+            //<letters/Value>
             Dictionary<char, int> myValues = new Dictionary<char, int>
             {
                 {'I',1 } , {'V',5}, {'X',10}, { 'L',50}, {'C',100}, {'D',500}, {'M',1000}
             };
+            //</letters/Value>
 
             int sum = 0;
             int lengthRoman = romanNumeral.Length;
@@ -50,20 +52,14 @@ namespace RomanNumeralHelper
 
             if (lengthRoman >= 3)
             {
-                for (int i = 0; i < lengthRoman-1; i++)
+                for (int i = 1; i <= lengthRoman-1; i++)
                 {
-                    int current = myValues[romanNumeral[i]];
-                    int after = myValues[romanNumeral[i + 1]];
-                    if (current < after)
-                    {
-                        sum = sum - current;
-                    }
-                    else
-                    {
-                        sum = sum + current;
-                    }
+                    int current = myValues[romanNumeral[i-1]];
+                    int after = myValues[romanNumeral[i ]];
+                    sum = (current < after ? sum - current : sum + current);
 
                 }
+                sum = sum + myValues[romanNumeral[lengthRoman - 1]];
             }
             else
             {
@@ -77,11 +73,11 @@ namespace RomanNumeralHelper
                 {
                     if ((lengthRoman == 2) & (isBigger( romanNumeral[0], romanNumeral[1])))
                     {
-                        sum = myValues[romanNumeral[1]] + myValues[romanNumeral[0]];
+                        sum = myValues[romanNumeral[1]] - myValues[romanNumeral[0]];
                     }
                     else
                     {
-                        sum = myValues[romanNumeral[1]] - myValues[romanNumeral[0]];
+                        sum = myValues[romanNumeral[1]] + myValues[romanNumeral[0]];
                     };
 
                 }
@@ -102,8 +98,9 @@ namespace RomanNumeralHelper
                         
             int valueA = myValues[a];
             int valueB = myValues[b];
+          //  Console.WriteLine($"En isBigger el pimero es {myValues[a]} y el segundo es {myValues[b]} ");
 
-            return valueB >= valueA ? true : false;
+            return valueB < valueA ? true : false;
 
         }
 
