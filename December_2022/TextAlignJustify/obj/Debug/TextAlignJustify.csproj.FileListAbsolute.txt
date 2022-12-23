@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\bin\Debug\TextAlignJustify.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\bin\Debug\TextAlignJustify.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\bin\Debug\TextAlignJustify.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\obj\Debug\TextAlignJustify.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\obj\Debug\TextAlignJustify.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\obj\Debug\TextAlignJustify.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\TextAlignJustify\obj\Debug\TextAlignJustify.pdb
