@@ -13,7 +13,7 @@ namespace TextAlignJustify
             string paragraph = "Viva la consentida a los que van a vivir";
             List<string> wordsLine = (paragraph.Split().ToList());
             int letters = wordsLine.Select(x => x.Length).Sum();
-            string testDistri = DistributeSpaces(wordsLine, 42);
+            string testDistri = Justify(paragraph, 12);
             Console.WriteLine(testDistri);
             Console.ReadLine();
         }
@@ -21,68 +21,54 @@ namespace TextAlignJustify
         {
             // create an array of words
             List<string> words = str.Split(' ').ToList();
+            // create the string to generate
             StringBuilder justPara = new StringBuilder();
-
-            if (words.Count()<=1)
-            {
-                justPara.Append(words[0]);
-                justPara.Append('\n');
-            }
+          
             
-            int countWord = 0;
-            int totalWords = words.Count();
-            int i = 0;
+            bool isFinish = false;
 
-            while (totalWords!= countWord)
+            while (!isFinish)
             {
-                List<string> wordsToUse = new List<string>();
-                int numLetters = 0;
-                int wordsLine = 0;
-                
-                do
+                if (words.Count() <= 1)
                 {
-                    numLetters = words[i].Length;
-                    if (numLetters <=len)
-                    {
-                        numLetters = numLetters + 1;
-                        i++;
-                        wordsToUse.Add(words[i]);
-
-                    }
-                    else
-                    {
-                       string newRenglon =  DistributeSpaces(wordsToUse, len);
-                        justPara.Append(newRenglon);
-                        justPara.Append('\n');
-                    }
-                    
-
-                } while (numLetters<len);
-               
-
-
-                /*
-
-                if (numLetters < len)
-                {
-                    letters = letters + 1;
-                    wordsLine++;
-                    i++;
-                    // distribute the spaces
-                    string line = 
-                    justPara.Append(line);
+                    justPara.Append(words[0]);
+                    isFinish = true;
                 }
-                */
+                else
+                {
+                    int inicio = 0;
+                    List<string> wordsinLine = new List<string>();
+                    int lines = 0;
+                    while (inicio< words.Count - 1)
+                    {
+                        
+                        if (lines <= 1)
+                        {
+                            wordsinLine.Add(words[inicio]);
+                            inicio++;
+                        }
+                        else
+                        {
+                            string newRenglon = DistributeSpaces(wordsinLine, len);
+                            justPara.Append(newRenglon);
+                            justPara.Append('\n');
+                            wordsinLine.Clear();
+                            inicio++;
+                        }
+                        lines = MinNumberLines(wordsinLine, len);
 
+                    };
+
+                }
+                
             }
-
-            // calculate how many words fit in a line
-            //check if it is a last line or only a word
-            // calculate how many words in the line
-             
-            //repeat
-
             return justPara.ToString();
+
+
+
+
+
+
         }
         // this function distribute the spaces in lines that are not last one
         // the words need to be equal or less than needed to fill the line 
@@ -120,5 +106,21 @@ namespace TextAlignJustify
 
             
         }
+        public static int MinNumberLines(List<string> words, int len)
+        {
+            // totalLetters is how many letters in totals 
+            int totalLetters = words.Select(x => x.Length).Sum();
+
+            // numberOfWords is how many words
+            int numberOfWords = words.Count;
+            // minimum number of spaces needed.  Last word doesn't need
+            int minNumberSpaces = numberOfWords - 1;
+
+            int minNumberofLines = (totalLetters + minNumberSpaces) / len;
+
+            return minNumberofLines;
+        }
+
+
     }
 }
