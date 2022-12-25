@@ -15,48 +15,82 @@ namespace TextAlignJustify
             int letters = wordsLine.Select(x => x.Length).Sum();
             string testDistri = Justify(paragraph, 12);
             Console.WriteLine(testDistri);
+            //Console.WriteLine(MinNumberLines(wordsLine, 8));
             Console.ReadLine();
         }
         public static string Justify(string str, int len)
         {
-            // create an array of words
+            // create an array of words in the paragraph
             List<string> words = str.Split(' ').ToList();
-            // create the string to generate
+            // create the string to generate the answer
             StringBuilder justPara = new StringBuilder();
           
-            
+            // control if the whole list of words is being processed
             bool isFinish = false;
+
 
             while (!isFinish)
             {
-                if (words.Count() <= 1)
+                // do append the last word if there is only one and finish
+                if (words.Count() < 1)
                 {
+                   
                     justPara.Append(words[0]);
                     isFinish = true;
                 }
                 else
                 {
-                    int inicio = 0;
+                    //currentWord is the current word being process
+                    int currentWord = 0;
                     List<string> wordsinLine = new List<string>();
-                    int lines = 0;
-                    while (inicio< words.Count - 1)
+                    //Console.WriteLine("the number of words in paragraph are {0}", words.Count());
+                    // int lines = 0;
+                    int newlineLenght = 0;
+                    while (currentWord< words.Count - 1)
                     {
-                        
-                        if (lines <= 1)
+
+                        newlineLenght = words[currentWord].Length + 1;
+                        if (newlineLenght <= len)
                         {
-                            wordsinLine.Add(words[inicio]);
-                            inicio++;
+                            wordsinLine.Add(words[currentWord]);
+                            words.Remove(words[currentWord]);
+                            Console.WriteLine("the number of words in the line are {0}", wordsinLine.Count());
+                            currentWord++;
+                        }
+                        else
+                        {
+                            string newRenglon = DistributeSpaces(wordsinLine, len);
+                            Console.WriteLine(newRenglon);
+                            justPara.Append(newRenglon);
+
+                            justPara.Append('\n');
+                            wordsinLine.Clear();
+                            currentWord++;
+
+                        }
+
+
+                        /*
+                         * 
+                    
+                        if (lines < 2)
+                        {
+                            wordsinLine.Add(words[currentWord]);
+                            words.Remove(words[currentWord]);
+                            currentWord++;
+                            
                         }
                         else
                         {
                             string newRenglon = DistributeSpaces(wordsinLine, len);
                             justPara.Append(newRenglon);
+                            
                             justPara.Append('\n');
                             wordsinLine.Clear();
-                            inicio++;
+                            currentWord++;
                         }
                         lines = MinNumberLines(wordsinLine, len);
-
+                        */
                     };
 
                 }
@@ -106,11 +140,12 @@ namespace TextAlignJustify
 
             
         }
+        // return how many lines are needed.  Need to fix
         public static int MinNumberLines(List<string> words, int len)
         {
             // totalLetters is how many letters in totals 
             int totalLetters = words.Select(x => x.Length).Sum();
-
+            //Console.WriteLine("total letters in the list are: {0}", totalLetters);
             // numberOfWords is how many words
             int numberOfWords = words.Count;
             // minimum number of spaces needed.  Last word doesn't need
