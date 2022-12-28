@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\bin\Debug\daily-conditioning.exe.config
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\bin\Debug\daily-conditioning.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\bin\Debug\daily-conditioning.pdb
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\obj\Debug\daily-conditioning.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\obj\Debug\daily-conditioning.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\obj\Debug\daily-conditioning.exe
+C:\Users\edilm\OneDrive\Desktop\CSharp\CodeWars\December_2022\daily-conditioning\obj\Debug\daily-conditioning.pdb

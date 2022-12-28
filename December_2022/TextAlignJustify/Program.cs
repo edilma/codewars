@@ -12,11 +12,20 @@ namespace TextAlignJustify
         {
             string paragraph = "Viva la consentida a los que van a vivir";
             //List<string> wordsLine = (paragraph.Split().ToList());
+         
+
+
+
+
             //int letters = wordsLine.Select(x => x.Length).Sum();
-            string testDistri = Justify2(paragraph, 12);
-            Console.WriteLine(testDistri);
+           string testDistri = Justify2(paragraph, 12);
+           Console.WriteLine(testDistri);
             // Console.WriteLine(MinNumberLines(wordsLine, 10));
             Console.ReadLine();
+
+
+
+
         }
         public static string Justify(string str, int len)
         {
@@ -83,9 +92,9 @@ namespace TextAlignJustify
                         else
                         {
                             string newRenglon = DistributeSpaces(wordsinLine, len);
-                            justPara.Append(newRenglon);
+                            finalParagraph.Append(newRenglon);
                             
-                            justPara.Append('\n');
+                            finalParagraph.Append('\n');
                             wordsinLine.Clear();
                             currentWord++;
                         }
@@ -158,34 +167,70 @@ namespace TextAlignJustify
 
         public static string Justify2(string str, int len)
         {
+            StringBuilder finalParagraph = new StringBuilder();
             List<string> words = str.Split(' ').ToList();
-            StringBuilder justPara = new StringBuilder();
+            Queue<string> wordsQueu = new Queue<string>();
+            int lineSize = 0;
             List<string> lineWords = new List<string>();
-         
-
-            while (words.Count!=0)
+            foreach (string word in words)
             {
+                Console.WriteLine(word);
+                wordsQueu.Enqueue(word);
                 
-                int lineSize = words[0].Length + 1;
-                Console.WriteLine($"Line size is {lineSize}");
-
+            }
+           // bool isFinished = false;
+            string nextWord = wordsQueu.Peek();
+            while (nextWord !=string.Empty)
+            {
+                lineSize = lineSize + nextWord.Length + 1;
                 if (lineSize <= len)
                 {
-                    Console.WriteLine($"We are processing {words[0]}");
-                    lineWords.Add(words[0]);
-                    words.RemoveAt(0);
-
+                    Console.WriteLine($"We are processing {nextWord}");
+                    lineWords.Add(nextWord);
+                    wordsQueu.Dequeue();
                 }
                 else
                 {
                     string newLine = string.Join(" ", lineWords);
+                    finalParagraph.Append(newLine);
+                    finalParagraph.Append('\n');
+                    lineWords.Clear();
                     lineSize = 0;
-                    justPara.Append(newLine);
-                    justPara.Append('\n');
-                    
+
                 }
+                nextWord = wordsQueu.Peek();
             }
-            return justPara.ToString();
+
+            /*
+            do
+            {
+               // string nextWord = wordsQueu.Peek();
+                lineSize = lineSize + nextWord.Length + 1;
+                if (lineSize <= len )
+                {
+                    Console.WriteLine($"We are processing {nextWord}");
+                    lineWords.Add(nextWord);
+                    wordsQueu.Dequeue();
+                }
+                else
+                {
+                    string newLine = string.Join(" ", lineWords);
+                    finalParagraph.Append(newLine);
+                    finalParagraph.Append('\n');
+                    lineWords.Clear();
+                    lineSize = 0;
+
+                }
+                if (wordsQueu.Count() == 0)
+                {
+                    isFinished = true;
+                }
+
+
+            } while (!isFinished);
+            */
+
+            return finalParagraph.ToString();
 
         }
     }
