@@ -11,11 +11,11 @@ namespace TextAlignJustify
         static void Main(string[] args)
         {
             string paragraph = "Viva la consentida a los que van a vivir";
-            List<string> wordsLine = (paragraph.Split().ToList());
-            int letters = wordsLine.Select(x => x.Length).Sum();
-            string testDistri = Justify(paragraph, 12);
+            //List<string> wordsLine = (paragraph.Split().ToList());
+            //int letters = wordsLine.Select(x => x.Length).Sum();
+            string testDistri = Justify2(paragraph, 12);
             Console.WriteLine(testDistri);
-            //Console.WriteLine(MinNumberLines(wordsLine, 8));
+            // Console.WriteLine(MinNumberLines(wordsLine, 10));
             Console.ReadLine();
         }
         public static string Justify(string str, int len)
@@ -24,7 +24,7 @@ namespace TextAlignJustify
             List<string> words = str.Split(' ').ToList();
             // create the string to generate the answer
             StringBuilder justPara = new StringBuilder();
-          
+
             // control if the whole list of words is being processed
             bool isFinish = false;
 
@@ -32,9 +32,9 @@ namespace TextAlignJustify
             while (!isFinish)
             {
                 // do append the last word if there is only one and finish
-                if (words.Count() < 1)
+                if (words.Count() <= 1)
                 {
-                   
+
                     justPara.Append(words[0]);
                     isFinish = true;
                 }
@@ -46,28 +46,28 @@ namespace TextAlignJustify
                     //Console.WriteLine("the number of words in paragraph are {0}", words.Count());
                     // int lines = 0;
                     int newlineLenght = 0;
-                    while (currentWord< words.Count - 1)
+                    while (currentWord < words.Count - 1)
                     {
 
-                        newlineLenght = words[currentWord].Length + 1;
                         if (newlineLenght <= len)
                         {
                             wordsinLine.Add(words[currentWord]);
-                            words.Remove(words[currentWord]);
+                            words.RemoveAt(0);
                             Console.WriteLine("the number of words in the line are {0}", wordsinLine.Count());
-                            currentWord++;
+                            //currentWord++;
                         }
                         else
                         {
-                            string newRenglon = DistributeSpaces(wordsinLine, len);
+                            // string newRenglon = DistributeSpaces(wordsinLine, len);
+                            string newRenglon = String.Join(" ", wordsinLine);
                             Console.WriteLine(newRenglon);
                             justPara.Append(newRenglon);
 
                             justPara.Append('\n');
                             wordsinLine.Clear();
-                            currentWord++;
 
                         }
+                        newlineLenght += words[currentWord].Length + 1;
 
 
                         /*
@@ -94,7 +94,7 @@ namespace TextAlignJustify
                     };
 
                 }
-                
+
             }
             return justPara.ToString();
 
@@ -107,7 +107,7 @@ namespace TextAlignJustify
         // this function distribute the spaces in lines that are not last one
         // the words need to be equal or less than needed to fill the line 
         // working 
-        public static string DistributeSpaces(List<string>wordsLine, int len)
+        public static string DistributeSpaces(List<string> wordsLine, int len)
         {
             //<calculateTotals>
             // totalLetters is how many letters in totals 
@@ -128,24 +128,24 @@ namespace TextAlignJustify
             }
             else
             {
-                int i= 0;
+                int i = 0;
                 do
                 {
                     wordsLine[i] = wordsLine + "-";
                     spacesLeft--;
-                } while (spacesLeft>0);
+                } while (spacesLeft > 0);
                 return String.Join(" ", wordsLine);
-            
+
             }
 
-            
+
         }
-        // return how many lines are needed.  Need to fix
+        // return how many lines are needed for the words in the list.  
         public static int MinNumberLines(List<string> words, int len)
         {
             // totalLetters is how many letters in totals 
             int totalLetters = words.Select(x => x.Length).Sum();
-            //Console.WriteLine("total letters in the list are: {0}", totalLetters);
+            Console.WriteLine("total letters in the list are: {0}", totalLetters);
             // numberOfWords is how many words
             int numberOfWords = words.Count;
             // minimum number of spaces needed.  Last word doesn't need
@@ -156,6 +156,37 @@ namespace TextAlignJustify
             return minNumberofLines;
         }
 
+        public static string Justify2(string str, int len)
+        {
+            List<string> words = str.Split(' ').ToList();
+            StringBuilder justPara = new StringBuilder();
+            List<string> lineWords = new List<string>();
+         
 
+            while (words.Count!=0)
+            {
+                
+                int lineSize = words[0].Length + 1;
+                Console.WriteLine($"Line size is {lineSize}");
+
+                if (lineSize <= len)
+                {
+                    Console.WriteLine($"We are processing {words[0]}");
+                    lineWords.Add(words[0]);
+                    words.RemoveAt(0);
+
+                }
+                else
+                {
+                    string newLine = string.Join(" ", lineWords);
+                    lineSize = 0;
+                    justPara.Append(newLine);
+                    justPara.Append('\n');
+                    
+                }
+            }
+            return justPara.ToString();
+
+        }
     }
 }
