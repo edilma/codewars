@@ -10,16 +10,13 @@ namespace TextAlignJustify
     {
         static void Main(string[] args)
         {
-            string paragraph = "Viva la consentida a los que van a vivir";
-            //List<string> wordsLine = (paragraph.Split().ToList());
-         
-
-
-
-
+            string paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis dolor mauris, at elementum ligula tempor eget. In quis rhoncus nunc, at aliquet orci. Fusce at dolor sit amet felis suscipit tristique. Nam a imperdiet tellus. Nulla eu vestibulum urna. Vivamus tincidunt suscipit enim, nec ultrices nisi volutpat ac. Maecenas sit amet lacinia arcu, non dictum justo. Donec sed quam vel risus faucibus euismod. Suspendisse rhoncus rhoncus felis at fermentum. Donec lorem magna, ultricies a nunc sit amet, blandit fringilla nunc. In vestibulum velit ac felis rhoncus pellentesque. Mauris at tellus enim. Aliquam eleifend tempus dapibus. Pellentesque commodo, nisi sit amet hendrerit fringilla, ante odio porta lacus, ut elementum justo nulla et dolor.";
+            string paragraph2 = "Lorem ipsum dolor sit amet";
+            List<string> wordsLine = (paragraph2.Split().ToList());
             //int letters = wordsLine.Select(x => x.Length).Sum();
-           string testDistri = Justify2(paragraph, 12);
-           Console.WriteLine(testDistri);
+            //string testDistri = Justify2(paragraph2, 30);
+            string testDistri = DistributeSpaces(wordsLine, 29);
+            Console.WriteLine(testDistri);
             // Console.WriteLine(MinNumberLines(wordsLine, 10));
             Console.ReadLine();
 
@@ -55,6 +52,7 @@ namespace TextAlignJustify
                     //Console.WriteLine("the number of words in paragraph are {0}", words.Count());
                     // int lines = 0;
                     int newlineLenght = 0;
+                    string newRenglon="";
                     while (currentWord < words.Count - 1)
                     {
 
@@ -63,12 +61,12 @@ namespace TextAlignJustify
                             wordsinLine.Add(words[currentWord]);
                             words.RemoveAt(0);
                             Console.WriteLine("the number of words in the line are {0}", wordsinLine.Count());
-                            //currentWord++;
+                            currentWord++;
                         }
                         else
                         {
                             // string newRenglon = DistributeSpaces(wordsinLine, len);
-                            string newRenglon = String.Join(" ", wordsinLine);
+                             newRenglon = String.Join(" ", wordsinLine);
                             Console.WriteLine(newRenglon);
                             justPara.Append(newRenglon);
 
@@ -78,29 +76,8 @@ namespace TextAlignJustify
                         }
                         newlineLenght += words[currentWord].Length + 1;
 
-
-                        /*
-                         * 
-                    
-                        if (lines < 2)
-                        {
-                            wordsinLine.Add(words[currentWord]);
-                            words.Remove(words[currentWord]);
-                            currentWord++;
-                            
-                        }
-                        else
-                        {
-                            string newRenglon = DistributeSpaces(wordsinLine, len);
-                            finalParagraph.Append(newRenglon);
-                            
-                            finalParagraph.Append('\n');
-                            wordsinLine.Clear();
-                            currentWord++;
-                        }
-                        lines = MinNumberLines(wordsinLine, len);
-                        */
                     };
+                    justPara.Append(newRenglon); 
 
                 }
 
@@ -121,117 +98,95 @@ namespace TextAlignJustify
             //<calculateTotals>
             // totalLetters is how many letters in totals 
             int totalLetters = wordsLine.Select(x => x.Length).Sum();
+            Console.WriteLine(totalLetters);
+            Console.WriteLine(len);
 
             // numberOfWords is how many words
             int numberOfWords = wordsLine.Count;
             // minimum number of spaces needed.  Last word doesn't need
             int minNumberSpaces = numberOfWords - 1;
-            int spacesLeft = len - totalLetters - minNumberSpaces;
+            int spacesLeft = len - totalLetters;
+            Console.WriteLine(spacesLeft);
+
             //</calculateTotals>
-
-            //if totalletters 
-
-            if (spacesLeft == 0)
+            StringBuilder answer = new StringBuilder();
+            bool isFinised = false;
+            do
             {
-                return String.Join("-", wordsLine);
-            }
-            else
-            {
-                int i = 0;
-                do
+               
+                for (int i = 0; i < wordsLine.Count-2; i++)
                 {
-                    wordsLine[i] = wordsLine + "-";
+                    wordsLine[i] = wordsLine[i] + "-";
                     spacesLeft--;
-                } while (spacesLeft > 0);
-                return String.Join(" ", wordsLine);
+                    Console.WriteLine(spacesLeft);
+                    if (spacesLeft==0)
+                    {
+                        isFinised= true;
+                        break;
+                    }
 
+                }
+
+            } while (!isFinised);
+
+         
+            foreach (string word in wordsLine)
+            {
+                answer.Append(word);
+                answer.Append("-");
             }
+            return answer.ToString();
+          
+
 
 
         }
         // return how many lines are needed for the words in the list.  
-        public static int MinNumberLines(List<string> words, int len)
-        {
-            // totalLetters is how many letters in totals 
-            int totalLetters = words.Select(x => x.Length).Sum();
-            Console.WriteLine("total letters in the list are: {0}", totalLetters);
-            // numberOfWords is how many words
-            int numberOfWords = words.Count;
-            // minimum number of spaces needed.  Last word doesn't need
-            int minNumberSpaces = numberOfWords - 1;
-
-            int minNumberofLines = (totalLetters + minNumberSpaces) / len;
-
-            return minNumberofLines;
-        }
-
+     
         public static string Justify2(string str, int len)
         {
             StringBuilder finalParagraph = new StringBuilder();
             List<string> words = str.Split(' ').ToList();
             Queue<string> wordsQueu = new Queue<string>();
-            int lineSize = 0;
-            List<string> lineWords = new List<string>();
             foreach (string word in words)
             {
-                Console.WriteLine(word);
                 wordsQueu.Enqueue(word);
-                
             }
-           // bool isFinished = false;
-            string nextWord = wordsQueu.Peek();
-            while (nextWord !=string.Empty)
+            List<string> lineWords = new List<string>();
+            int lineSize = 0;
+            string nextWord = "";
+            string newLine = "";
+            // process the words leaving the last line withou process 
+            while (wordsQueu.Count>1)
             {
-                lineSize = lineSize + nextWord.Length + 1;
-                if (lineSize <= len)
-                {
-                    Console.WriteLine($"We are processing {nextWord}");
-                    lineWords.Add(nextWord);
-                    wordsQueu.Dequeue();
-                }
-                else
-                {
-                    string newLine = string.Join(" ", lineWords);
-                    finalParagraph.Append(newLine);
-                    finalParagraph.Append('\n');
-                    lineWords.Clear();
-                    lineSize = 0;
-
-                }
                 nextWord = wordsQueu.Peek();
-            }
-
-            /*
-            do
-            {
-               // string nextWord = wordsQueu.Peek();
-                lineSize = lineSize + nextWord.Length + 1;
-                if (lineSize <= len )
+                if (lineSize <len)
                 {
-                    Console.WriteLine($"We are processing {nextWord}");
+                    //Console.WriteLine($"We are processing {nextWord}");
                     lineWords.Add(nextWord);
                     wordsQueu.Dequeue();
+                    nextWord = wordsQueu.Peek();
                 }
                 else
                 {
-                    string newLine = string.Join(" ", lineWords);
+                    newLine = string.Join(" ", lineWords);
                     finalParagraph.Append(newLine);
                     finalParagraph.Append('\n');
                     lineWords.Clear();
                     lineSize = 0;
 
                 }
-                if (wordsQueu.Count() == 0)
-                {
-                    isFinished = true;
-                }
+                lineSize = lineSize + nextWord.Length + 1;
 
-
-            } while (!isFinished);
-            */
-
+            }
+            // process the last line.
+            lineWords.Add(nextWord);
+            newLine = string.Join(" ", lineWords);
+            finalParagraph.Append(newLine);
             return finalParagraph.ToString();
 
         }
+
+
     }
 }
