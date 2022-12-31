@@ -11,11 +11,11 @@ namespace TextAlignJustify
         static void Main(string[] args)
         {
             string paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis dolor mauris, at elementum ligula tempor eget. In quis rhoncus nunc, at aliquet orci. Fusce at dolor sit amet felis suscipit tristique. Nam a imperdiet tellus. Nulla eu vestibulum urna. Vivamus tincidunt suscipit enim, nec ultrices nisi volutpat ac. Maecenas sit amet lacinia arcu, non dictum justo. Donec sed quam vel risus faucibus euismod. Suspendisse rhoncus rhoncus felis at fermentum. Donec lorem magna, ultricies a nunc sit amet, blandit fringilla nunc. In vestibulum velit ac felis rhoncus pellentesque. Mauris at tellus enim. Aliquam eleifend tempus dapibus. Pellentesque commodo, nisi sit amet hendrerit fringilla, ante odio porta lacus, ut elementum justo nulla et dolor.";
-            string paragraph2 = "Lorem ipsum dolor sit amet";
+            string paragraph2 = "123 45 6";
             List<string> wordsLine = (paragraph2.Split().ToList());
             //int letters = wordsLine.Select(x => x.Length).Sum();
-            //string testDistri = Justify2(paragraph2, 30);
-            string testDistri = DistributeSpaces(wordsLine, 29);
+            string testDistri = Justify2(paragraph2, 7);
+            //string testDistri = DistributeSpaces(wordsLine, 29);
             Console.WriteLine(testDistri);
             // Console.WriteLine(MinNumberLines(wordsLine, 10));
             Console.ReadLine();
@@ -26,31 +26,22 @@ namespace TextAlignJustify
         }
         public static string Justify(string str, int len)
         {
-            // create an array of words in the paragraph
             List<string> words = str.Split(' ').ToList();
-            // create the string to generate the answer
             StringBuilder justPara = new StringBuilder();
-
-            // control if the whole list of words is being processed
             bool isFinish = false;
 
 
             while (!isFinish)
             {
-                // do append the last word if there is only one and finish
                 if (words.Count() <= 1)
                 {
-
                     justPara.Append(words[0]);
                     isFinish = true;
                 }
                 else
                 {
-                    //currentWord is the current word being process
                     int currentWord = 0;
                     List<string> wordsinLine = new List<string>();
-                    //Console.WriteLine("the number of words in paragraph are {0}", words.Count());
-                    // int lines = 0;
                     int newlineLenght = 0;
                     string newRenglon="";
                     while (currentWord < words.Count - 1)
@@ -60,22 +51,16 @@ namespace TextAlignJustify
                         {
                             wordsinLine.Add(words[currentWord]);
                             words.RemoveAt(0);
-                            Console.WriteLine("the number of words in the line are {0}", wordsinLine.Count());
                             currentWord++;
                         }
                         else
                         {
-                            // string newRenglon = DistributeSpaces(wordsinLine, len);
                              newRenglon = String.Join(" ", wordsinLine);
-                            Console.WriteLine(newRenglon);
                             justPara.Append(newRenglon);
-
                             justPara.Append('\n');
                             wordsinLine.Clear();
-
                         }
                         newlineLenght += words[currentWord].Length + 1;
-
                     };
                     justPara.Append(newRenglon); 
 
@@ -83,66 +68,40 @@ namespace TextAlignJustify
 
             }
             return justPara.ToString();
-
-
-
-
-
-
         }
         // this function distribute the spaces in lines that are not last one
         // the words need to be equal or less than needed to fill the line 
         // working 
         public static string DistributeSpaces(List<string> wordsLine, int len)
         {
-            //<calculateTotals>
-            // totalLetters is how many letters in totals 
             int totalLetters = wordsLine.Select(x => x.Length).Sum();
-            Console.WriteLine(totalLetters);
-            Console.WriteLine(len);
-
-            // numberOfWords is how many words
             int numberOfWords = wordsLine.Count;
-            // minimum number of spaces needed.  Last word doesn't need
-            int minNumberSpaces = numberOfWords - 1;
-            int spacesLeft = len - totalLetters;
-            Console.WriteLine(spacesLeft);
-
-            //</calculateTotals>
-            StringBuilder answer = new StringBuilder();
-            bool isFinised = false;
-            do
+            // spacesLeft are the extra spaces to distribute
+            int spacesLeft = len - totalLetters; 
+          
+            bool doContinue = true;
+            while (doContinue)
             {
-               
-                for (int i = 0; i < wordsLine.Count-2; i++)
+                for (int i = 0; i < wordsLine.Count - 2; i++)
                 {
-                    wordsLine[i] = wordsLine[i] + "-";
-                    spacesLeft--;
-                    Console.WriteLine(spacesLeft);
-                    if (spacesLeft==0)
+                    wordsLine[i] = wordsLine[i] + " "; 
+                    if (spacesLeft == 0)
                     {
-                        isFinised= true;
                         break;
                     }
-
                 }
-
-            } while (!isFinised);
-
-         
-            foreach (string word in wordsLine)
-            {
-                answer.Append(word);
-                answer.Append("-");
+                spacesLeft--;
+                doContinue = false;
             }
-            return answer.ToString();
+            string answer = string.Join(" ", wordsLine);
+
+            return answer;
           
 
 
 
         }
-        // return how many lines are needed for the words in the list.  
-     
+             
         public static string Justify2(string str, int len)
         {
             StringBuilder finalParagraph = new StringBuilder();
@@ -169,7 +128,7 @@ namespace TextAlignJustify
                 }
                 else
                 {
-                    newLine = string.Join(" ", lineWords);
+                    newLine = DistributeSpaces(lineWords, len);
                     finalParagraph.Append(newLine);
                     finalParagraph.Append('\n');
                     lineWords.Clear();
